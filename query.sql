@@ -1,3 +1,4 @@
+-- BEGINNING OF TABLE CREATION
 -- One-to-one
 -- Membuat tabel "User"
 CREATE TABLE "User" (
@@ -29,6 +30,7 @@ CREATE TABLE "City" (
   population INTEGER,
   FOREIGN KEY(country_id) REFERENCES "Country"(country_id)
 );
+-- Many-to-many
 -- Membuat tabel "Actor"
 CREATE TABLE "Actor" (
   actor_id SERIAL PRIMARY KEY,
@@ -48,6 +50,8 @@ CREATE TABLE "Actor_Movie" (
   FOREIGN KEY (actor_id) REFERENCES "Actor" (actor_id),
   FOREIGN KEY (movie_id) REFERENCES "Movie" (movie_id)
 );
+
+-- BEGINNING OF DATA INSERTION
 -- Insert data pada tabel "User"
 INSERT INTO
   "User" (username, email)
