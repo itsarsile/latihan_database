@@ -1,4 +1,3 @@
-DROP TABLE "User";
 -- One-to-one
 -- Membuat tabel "User"
 CREATE TABLE "User" (
